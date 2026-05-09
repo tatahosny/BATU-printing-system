@@ -1,55 +1,52 @@
-# 🏛️ نظام إدارة وتوزيع الكتب والمطبوعات (BATU Printing System)
+# Academic Printing & Distribution System (Multi-University)
 
-نظام متكامل ومبسط تم تطويره خصيصاً لـ **جامعة برج العرب التكنولوجية**، يهدف إلى تسهيل وتنظيم عملية طباعة وتوزيع الكتب والمواد الدراسية على الطلاب، وضمان دقة العُهدة والمخزون.
-
----
-
-## 📝 نبذة عن المشروع
-يعمل النظام كحلقة وصل بين الإدارة الأكاديمية والمخازن والمناديب (Delegates) لضمان وصول المادة العلمية لكل طالب بدقة متناهية. يوفر النظام أدوات رقابية وإدارية متقدمة تضمن شفافية العمليات وتتبع العُهد المالية والعينية.
+A comprehensive, multi-tenant platform designed to manage the printing and distribution of books and educational materials across multiple universities. This system streamlines the workflow between university administrations, central warehouses, and distribution delegates, ensuring absolute accuracy in inventory tracking and student deliveries.
 
 ---
 
-## 🚀 المميزات الرئيسية
-
-### 1. الإدارة الأكاديمية (Academic Management)
-- تنظيم الهيكل الجامعي (الجامعة، الكليات، الأقسام، والفرق الدراسية).
-- إدارة المواد الدراسية وربطها بالفرق والأقسام المعنية.
-
-### 2. إدارة شؤون الطلاب (Student Management)
-- رفع قوائم الطلاب مباشرة من ملفات **Excel**.
-- توزيع الطلاب تلقائياً على السكاشن بناءً على الأرقام الأكاديمية (ID Range).
-- تتبع حالة استلام كل طالب للمواد الدراسية لحظياً.
-
-### 3. إدارة المخزون والعُهدة (Inventory & Custody)
-- تتبع المخزون الرئيسي للمطبوعات.
-- توزيع الكتب من المخزن الرئيسي إلى مناديب الفرق (Batch Delegates).
-- تحويل العُهدة بين المستخدمين مع سجل كامل لكل حركة.
-- تحديث كميات المخزون وتصفير العُهدة عند الضرورة.
-
-### 4. نظام المتابعة والتوزيع (Delivery System)
-- واجهة مخصصة للمناديب لتسليم الكتب للطلاب بلمسة واحدة.
-- إمكانية رفع كشوفات السكاشن المطبوعة لمطابقة البيانات.
-- سجل نشاط (Activity Log) لكل مندوب لمتابعة أدائه والعمليات التي قام بها.
-
-### 5. التقارير والرقابة (Reports & Auditing)
-- لوحة تحكم (Dashboard) شاملة تعرض إحصائيات حية عن نسب التوزيع.
-- سجل كامل لكل العمليات التي تتم في النظام (System Logs) لضمان الأمان والمساءلة.
-- إحصائيات مفصلة عن أداء المناديب وحالة المخازن.
+## 📝 Project Overview
+This system provides a robust solution for academic institutions to manage their educational material supply chain. It supports multiple universities within a single instance, allowing each institution to maintain its own hierarchy of colleges, departments, and students while benefiting from a unified technological core.
 
 ---
 
-## 🛠️ التقنيات المستخدمة (Tech Stack)
+## 🚀 Key Features
 
-تم بناء النظام باستخدام أحدث التقنيات لضمان السرعة والأمان:
-- **الإطار البرمجي (Backend):** Laravel (PHP) - لضمان بنية قوية وآمنة.
-- **الواجهة الأمامية (Frontend):** Vue.js 3 مع Inertia.js - لتوفير تجربة مستخدم سريعة (Single Page Application).
-- **التنسيق (Styling):** Tailwind CSS - لتصميم عصري ومتجاوب مع جميع الشاشات.
-- **قاعدة البيانات:** MySQL - لتخزين البيانات بكفاءة.
-- **تكامل الملفات:** Maatwebsite Excel - لمعالجة ملفات الطلاب والمواد.
+### 1. Multi-Tenant University Management
+- Support for multiple universities in a single platform.
+- Dedicated administrative control for each university.
+- Isolation of data (Students, Inventory, Staff) between institutions.
+
+### 2. Academic Hierarchy Management
+- Flexible structure: University -> Colleges -> Departments -> Batches/Levels.
+- Subject management linked to specific academic paths.
+
+### 3. Smart Student Distribution
+- Batch upload of student lists via **Excel**.
+- Automatic section assignment based on ID ranges.
+- Real-time tracking of material reception status for every student.
+
+### 4. Advanced Inventory & Custody
+- Centralized warehouse management for each university.
+- Digital custody transfer between staff with full audit trails.
+- Real-time stock level monitoring and automated balance clearing.
+
+### 5. Delivery & Audit System
+- Streamlined mobile-responsive interface for distribution delegates.
+- Comprehensive Activity Logs for security and accountability.
+- Live analytics dashboard for distribution progress and stock status.
 
 ---
 
-## ⚙️ متطلبات التشغيل (Requirements)
+## 🛠️ Tech Stack
+- **Backend:** Laravel (PHP) - Scalable and secure architectural core.
+- **Frontend:** Vue.js 3 with Inertia.js - Modern, reactive SPA experience.
+- **Styling:** Tailwind CSS - Responsive and clean design system.
+- **Database:** MySQL - Efficient relational data storage.
+- **Integration:** Maatwebsite Excel - Robust file processing for large datasets.
+
+---
+
+## ⚙️ Requirements
 - PHP >= 8.2
 - MySQL
 - Composer
@@ -57,36 +54,36 @@
 
 ---
 
-## 🏗️ خطوات التنصيب (Installation)
+## 🏗️ Installation Steps
 
-1. قم بتثبيت المكتبات البرمجية:
+1. **Clone & Install Dependencies:**
    ```bash
    composer install
    npm install
    ```
 
-2. قم بإعداد ملف البيئة:
+2. **Environment Configuration:**
    ```bash
    cp .env.example .env
    php artisan key:generate
    ```
 
-3. قم بإنشاء قاعدة البيانات وتهجير الجداول:
+3. **Database Setup:**
    ```bash
    php artisan migrate --seed
    ```
 
-4. تشغيل النظام:
+4. **Running the Development Server:**
    ```bash
    npm run dev
-   # وفي نافذة أخرى
+   # In a separate terminal
    php artisan serve
    ```
 
 ---
 
-## 🎓 تحت إشراف وتطوير
-تم تطوير هذا النظام بواسطة **مصطفى حسني (Mostafa Hosny)** لخدمة **جامعة برج العرب التكنولوجية (Burj Al Arab Technological University)** لتطوير المنظومة الإدارية والتعليمية بالجامعة.
+## 🎓 Development & Vision
+This platform is designed to support the digital transformation of academic administration, moving away from paper-based tracking to a secure, transparent, and efficient digital ecosystem.
 
 ---
-*تم التطوير بكل ❤️ لدعم التحول الرقمي في التعليم الجامعي.*
+*Developed with excellence to empower educational institutions through technology.*
